@@ -37,10 +37,7 @@ primeFactorsInternal remainingPrimes n =
         take times (repeat d)
 
       newN =
-        if times > 0 then
-          n `div` (d ^ times)
-        else
-          n
+        n `div` (d ^ times)
     in
       if (head remainingPrimes) ^ 2 > newN then
         if newN > 1 then
