@@ -10,7 +10,7 @@ answer =
       [100..999]
 
     threeDigitNumbersCombinations =
-      combinations threeDigitNumbers threeDigitNumbers
+      combinations threeDigitNumbers
 
     products =
       map (\(a, b) -> a * b) threeDigitNumbersCombinations
@@ -18,17 +18,14 @@ answer =
     maximum (filter isPalindrome products)
 
 
-combinations :: Eq b => [a] -> [b] -> [(a, b)]
-combinations list1 list2 =
-  if list2 == [] then
-    []
-  else
-    case list1 of
-      first : rest ->
-        (map ((,) first) list2) ++ (combinations rest (drop 1 list2))
+combinations :: [a] -> [(a, a)]
+combinations list =
+  case list of
+    first : rest ->
+      (map ((,) first) list) ++ (combinations rest)
 
-      _ ->
-        []
+    _ ->
+      []
 
 
 isPalindrome :: Int -> Bool
