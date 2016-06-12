@@ -24,8 +24,8 @@ combinations list1 list2 =
     []
   else
     case list1 of
-      head : tail ->
-        (map ((,) head) list2) ++ (combinations tail (drop 1 list2))
+      first : rest ->
+        (map ((,) first) list2) ++ (combinations rest (drop 1 list2))
 
       _ ->
         []

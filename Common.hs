@@ -9,8 +9,8 @@ allPrimes =
 generatePrimes :: [Int] -> [Int]
 generatePrimes numbers =
   case numbers of
-    head : tail ->
-      head : generatePrimes (filter (\n -> n `rem` head /= 0) tail)
+    first : rest ->
+      first : generatePrimes (filter (\n -> n `rem` first /= 0) rest)
 
     _ ->
       []
