@@ -1,9 +1,19 @@
-module Common (isPrime, primeFactors) where
+module Common (allPrimes, primeFactors) where
 
 
-isPrime :: Int -> Bool
-isPrime n =
-  length (primeFactors n) == 1
+allPrimes :: [Int]
+allPrimes =
+  generatePrimes [2..]
+
+
+generatePrimes :: [Int] -> [Int]
+generatePrimes numbers =
+  case numbers of
+    head : tail ->
+      head : generatePrimes (filter (\n -> n `rem` head /= 0) tail)
+
+    _ ->
+      []
 
 
 primeFactors :: Int -> [Int]

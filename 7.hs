@@ -1,4 +1,4 @@
-import Common (isPrime, primeFactors)
+import Common (allPrimes)
 
 
 main :: IO ()
@@ -8,4 +8,4 @@ main =
 
 answer :: Int
 answer =
-  last $ take 10001 $ filter isPrime [2..]
+  allPrimes !! 10001
