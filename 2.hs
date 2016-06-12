@@ -5,21 +5,10 @@ main =
 
 answer :: Int
 answer =
-  sum $ filter even $ fibonacciSequence (4000000 - 1) [1, 1]
+  sum $ filter even $ takeWhile (< 4000000) $ entireFibonacciSequence
 
 
-fibonacciSequence :: Int -> [Int] -> [Int]
-fibonacciSequence maxNum startList =
-  case startList of
-    first : second : _ ->
-      let
-        next =
-          first + second
-      in
-        if next > maxNum then
-          startList
-        else
-          fibonacciSequence maxNum (next : startList)
-
-    _ ->
-      startList
+-- http://blog.srinivasan.biz/software/fibonacci-numbers-the-slow-way-or-the-fast-and-lazy-way
+entireFibonacciSequence :: [Int]
+entireFibonacciSequence =
+  1 : 1 : zipWith (+) entireFibonacciSequence (tail entireFibonacciSequence)
