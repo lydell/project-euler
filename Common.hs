@@ -27,11 +27,8 @@ primeFactorsInternal remainingPrimes n =
     [n]
   else
     let
-      d =
-        head remainingPrimes
-
-      newRemainingPrimes =
-        tail remainingPrimes
+      d : newRemainingPrimes =
+        remainingPrimes
 
       times =
         timesDivisible d n
@@ -44,11 +41,8 @@ primeFactorsInternal remainingPrimes n =
           n `div` (d ^ times)
         else
           n
-
-      nextD =
-        head remainingPrimes
     in
-      if nextD ^ 2 > newN then
+      if (head remainingPrimes) ^ 2 > newN then
         if newN > 1 then
           newN : primes
         else
