@@ -18,15 +18,21 @@ generatePrimes numbers =
 
 primeFactors :: Int -> [Int]
 primeFactors n =
-  primeFactorsInternal 2 n
+  primeFactorsInternal allPrimes n
 
 
-primeFactorsInternal :: Int -> Int -> [Int]
-primeFactorsInternal d n =
+primeFactorsInternal :: [Int] -> Int -> [Int]
+primeFactorsInternal remainingPrimes n =
   if n <= 1 then
     [n]
   else
     let
+      d =
+        head remainingPrimes
+
+      newRemainingPrimes =
+        tail remainingPrimes
+
       times =
         timesDivisible d n
 
@@ -39,16 +45,16 @@ primeFactorsInternal d n =
         else
           n
 
-      newD =
-        d + 1
+      nextD =
+        head remainingPrimes
     in
-      if newD ^ 2 > newN then
+      if nextD ^ 2 > newN then
         if newN > 1 then
           newN : primes
         else
           primes
       else
-        (primeFactorsInternal newD newN) ++ primes
+        (primeFactorsInternal newRemainingPrimes newN) ++ primes
 
 
 timesDivisible :: Int -> Int -> Int
