@@ -7,7 +7,7 @@ main =
 
 
 answer :: Int
-answer =
+answer = -- 232792560
   product $ merge $ map primeFactors [1 .. 20]
 
 

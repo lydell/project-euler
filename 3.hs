@@ -6,5 +6,5 @@ main =
 
 
 answer :: Int
-answer =
+answer = -- 6857
   maximum $ primeFactors 600851475143

@@ -3,7 +3,7 @@ main =
 
 
 answer :: Int
-answer =
+answer = -- 25164150
   let
     numbers =
       [1 .. 100]

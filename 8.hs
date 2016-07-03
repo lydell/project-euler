@@ -2,7 +2,7 @@ import Data.Char (digitToInt)
 import Data.List (tails)
 
 
-main =
+main = -- 23514624000
   print answer
 
 

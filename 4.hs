@@ -3,7 +3,7 @@ main =
 
 
 answer :: Int
-answer =
+answer = -- 906609
   let
     threeDigitNumbers =
       [100 .. 999]

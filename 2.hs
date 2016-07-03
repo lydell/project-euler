@@ -3,7 +3,7 @@ main =
 
 
 answer :: Int
-answer =
+answer = -- 4613732
   sum $ filter even $ takeWhile (< 4000000) $ entireFibonacciSequence
 
 

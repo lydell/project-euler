@@ -3,7 +3,7 @@ main =
 
 
 answer :: [Int]
-answer =
+answer = -- [31875000]
   let
     target =
       1000
