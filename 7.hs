@@ -1,7 +1,6 @@
 import Common (allPrimes)
 
 
-main :: IO ()
 main =
   print answer
 

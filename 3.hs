@@ -1,7 +1,6 @@
 import Common (primeFactors)
 
 
-main :: IO ()
 main =
   print answer
 
