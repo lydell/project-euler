@@ -25,9 +25,9 @@ mergeInsert :: Eq a => [a] -> [a] -> a -> [a]
 mergeInsert result list item =
   let
     numItemsInList =
-      length (filter (== item) list)
+      length $ filter (== item) list
 
     numItemsInResult =
-      length (filter (== item) result)
+      length $ filter (== item) result
   in
-    take (max 0 (numItemsInList - numItemsInResult)) (repeat item)
+    replicate (max 0 $ numItemsInList - numItemsInResult) item

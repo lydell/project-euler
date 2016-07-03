@@ -7,4 +7,4 @@ main =
 
 answer :: Int
 answer =
-  maximum (primeFactors 600851475143)
+  maximum $ primeFactors 600851475143

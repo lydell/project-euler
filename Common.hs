@@ -7,13 +7,10 @@ allPrimes =
 
 
 generatePrimes :: [Int] -> [Int]
-generatePrimes numbers =
-  case numbers of
-    first : rest ->
-      first : generatePrimes (filter (\n -> n `rem` first /= 0) rest)
-
-    _ ->
-      []
+generatePrimes [] =
+  []
+generatePrimes (first : rest) =
+  first : generatePrimes (filter (\n -> n `rem` first /= 0) rest)
 
 
 primeFactors :: Int -> [Int]
@@ -22,10 +19,10 @@ primeFactors n =
 
 
 primeFactorsInternal :: [Int] -> Int -> [Int]
-primeFactorsInternal remainingPrimes n =
-  if n <= 1 then
+primeFactorsInternal remainingPrimes n
+  | n <= 1 =
     [n]
-  else
+  | otherwise =
     let
       d : newRemainingPrimes =
         remainingPrimes
@@ -34,7 +31,7 @@ primeFactorsInternal remainingPrimes n =
         timesDivisible d n
 
       primes =
-        take times (repeat d)
+        replicate times d
 
       newN =
         n `div` (d ^ times)

@@ -14,17 +14,14 @@ answer =
     products =
       map (\(a, b) -> a * b) threeDigitNumbersCombinations
   in
-    maximum (filter isPalindrome products)
+    maximum $ filter isPalindrome products
 
 
 combinations :: [a] -> [(a, a)]
-combinations list =
-  case list of
-    first : rest ->
-      (map ((,) first) list) ++ (combinations rest)
-
-    _ ->
-      []
+combinations [] =
+  []
+combinations list@(first : rest) =
+  map ((,) first) list ++ combinations rest
 
 
 isPalindrome :: Int -> Bool
@@ -36,4 +33,4 @@ isPalindrome n =
     half =
       (length str) `div` 2
   in
-    (take half str) == (take half (reverse str))
+    take half str == take half (reverse str)

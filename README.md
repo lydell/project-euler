@@ -1,6 +1,6 @@
 # [Project Euler] solutions
 
-The solutions are written in Haskell, with a a coding style similar to the [Elm
+The solutions are written in Haskell, with a a coding style inspired by the [Elm
 language style guide][elm-style-guide].
 
 This is how I run them (requires [stack]):
