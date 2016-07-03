@@ -6,7 +6,7 @@ answer :: Int
 answer =
   let
     threeDigitNumbers =
-      [100..999]
+      [100 .. 999]
 
     threeDigitNumbersCombinations =
       combinations threeDigitNumbers

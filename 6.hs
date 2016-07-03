@@ -6,7 +6,7 @@ answer :: Int
 answer =
   let
     numbers =
-      [1..100]
+      [1 .. 100]
 
     sumOfSquares =
       sum $ map (^ 2) numbers

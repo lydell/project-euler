@@ -8,7 +8,7 @@ main =
 
 answer :: Int
 answer =
-  product $ merge $ map primeFactors [1..20]
+  product $ merge $ map primeFactors [1 .. 20]
 
 
 merge :: (Eq a, Foldable t) => t [a] -> [a]

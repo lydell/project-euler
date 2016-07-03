@@ -3,7 +3,7 @@ module Common (allPrimes, primeFactors) where
 
 allPrimes :: [Int]
 allPrimes =
-  generatePrimes [2..]
+  generatePrimes [2 ..]
 
 
 generatePrimes :: [Int] -> [Int]
