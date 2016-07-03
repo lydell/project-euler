@@ -1,5 +1,5 @@
 import Data.List (nub)
-import Common (primeFactors)
+import Data.Numbers.Primes (primeFactors)
 
 
 main =

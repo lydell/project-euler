@@ -1,4 +1,4 @@
-import Common (allPrimes)
+import Data.Numbers.Primes (primes)
 
 
 main = -- 104759
@@ -7,4 +7,4 @@ main = -- 104759
 
 answer :: Int
 answer =
-  allPrimes !! 10001
+  primes !! 10001

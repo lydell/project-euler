@@ -1,4 +1,4 @@
-import Common (primeFactors)
+import Data.Numbers.Primes (primeFactors)
 
 
 main =
