@@ -12,7 +12,7 @@ answer = -- 906609
       combinations threeDigitNumbers
 
     products =
-      map (\(a, b) -> a * b) threeDigitNumbersCombinations
+      map (uncurry (*)) threeDigitNumbersCombinations
   in
     maximum $ filter isPalindrome products
 
