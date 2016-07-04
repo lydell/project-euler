@@ -1,8 +1,8 @@
 import Data.Numbers.Primes (primes)
 
 
-main = -- 142913828922
-  print answer
+main =
+  print answer -- 142913828922
 
 
 answer :: Int

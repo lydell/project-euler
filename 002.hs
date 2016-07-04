@@ -1,9 +1,9 @@
 main =
-  print answer
+  print answer -- 4613732
 
 
 answer :: Int
-answer = -- 4613732
+answer =
   sum $ filter even $ takeWhile (< 4000000) $ entireFibonacciSequence
 
 

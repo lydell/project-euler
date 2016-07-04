@@ -2,9 +2,9 @@ import Data.Numbers.Primes (primeFactors)
 
 
 main =
-  print answer
+  print answer -- 6857
 
 
 answer :: Int
-answer = -- 6857
+answer =
   maximum $ primeFactors 600851475143

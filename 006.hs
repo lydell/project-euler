@@ -1,9 +1,9 @@
 main =
-  print answer
+  print answer -- 25164150
 
 
 answer :: Int
-answer = -- 25164150
+answer =
   let
     numbers =
       [1 .. 100]

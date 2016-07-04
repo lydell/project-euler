@@ -2,8 +2,8 @@ import Data.Char (digitToInt)
 import Data.List (tails)
 
 
-main = -- 23514624000
-  print answer
+main =
+  print answer -- 23514624000
 
 
 answer :: Int

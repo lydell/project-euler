@@ -1,9 +1,9 @@
 main =
-  print answer
+  print answer -- [31875000]
 
 
 answer :: [Int]
-answer = -- [31875000]
+answer =
   let
     target =
       1000

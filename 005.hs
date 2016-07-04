@@ -3,11 +3,11 @@ import Data.Numbers.Primes (primeFactors)
 
 
 main =
-  print answer
+  print answer -- 232792560
 
 
 answer :: Int
-answer = -- 232792560
+answer =
   product $ merge $ map primeFactors [1 .. 20]
 
 

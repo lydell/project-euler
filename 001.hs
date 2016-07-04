@@ -1,7 +1,7 @@
 main =
-  print answer
+  print answer -- 233168
 
 
 answer :: Int
-answer = -- 233168
+answer =
   sum $ filter (\n -> n `mod` 3 == 0 || n `mod` 5 == 0) [1 .. 999]

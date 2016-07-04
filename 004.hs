@@ -1,9 +1,9 @@
 main =
-  print answer
+  print answer -- 906609
 
 
 answer :: Int
-answer = -- 906609
+answer =
   let
     threeDigitNumbers =
       [100 .. 999]
